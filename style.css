@@ -1,29 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 .body{
-    /* background-color: black;
-    color: white; */
+    background-color: black;
+    color: white;
 }
 
 
 
 .left {
     width: 25vw;
-    padding: 20;
+    padding: 10px;
 }
 
 .right{
     width: 75vw;
 }
 
-
+.home{
+    padding: 10px;
+}
 
 .home ul li{
     display: flex;
     width: 14px;
     list-style: none;
     gap: 12px;
+    padding-top: 15px;
+    font-weight: bold;
 }
+
+.heading{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    padding-top: 15px;
+    font-weight: bold;
+    align-items: center;
+    padding: 23px 14px;
+    font-size: 12px;
+} 
+
+.library{
+    min-height: 80vh;
+    position: relative;
+}
+
+.heading img{
+    width: 22px ;
+}
+
+.footer{
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.footer a{
+    color: gray;
+}
+
+.right{
+    margin: 16px 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34,34,34) ;
+}
+
+.header > *{
+    padding: 20px;
+    
+}
+

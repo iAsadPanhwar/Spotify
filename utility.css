@@ -11,7 +11,7 @@
 }
 
 .border{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: 3px;
 }
 
@@ -22,4 +22,21 @@
 
 .invert{
     filter: invert();
+}
+
+.bg-gray{
+    background-color: #171515;
+    color: white;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 10px;
 }
