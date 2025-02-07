@@ -40,3 +40,29 @@
 .p-1{
     padding: 10px;
 }
+
+/* Dark Theme Modern Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;  /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;  /* Dark track background */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;  /* Dark gray thumb */
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;  /* Lighter gray on hover */
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
+}

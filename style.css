@@ -82,3 +82,48 @@
     
 }
 
+.spotifyPlaylists{
+    padding: 15px;
+}
+
+.cardContainer{
+    margin: 25px;
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+.card{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+}
+
+.card > *{
+    padding-top: 9px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.play{
+    width: 38px;
+    height: 38px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    top: 166px;
+    position: absolute;
+    right: 18px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
