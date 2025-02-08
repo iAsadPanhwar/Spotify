@@ -19,8 +19,9 @@
 }
 
 .right{
-    width: 75vw;
+    width: 73vw;
     position: relative;
+    margin: 16px 0;
 }
 
 .home{
@@ -66,10 +67,6 @@
 
 .footer a{
     color: gray;
-}
-
-.right{
-    margin: 16px 0;
 }
 
 .header{
@@ -170,7 +167,7 @@
     position: absolute;
     bottom: 0px;
     background-color: #43835b;
-    width: 100%;
+    width: 98%;
     padding: 12px;
 }
 
@@ -178,4 +175,16 @@
     display: flex;
     justify-content: center;
     gap: 18px;
+}
+
+.songList ul{
+    padding: 0 42px;
+}
+
+.songList ul li {
+    list-style: decimal;
+    display: flex;
+    gap: 34px;
+    cursor: pointer;
+    padding: 12px 0;
 }
