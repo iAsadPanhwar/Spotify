@@ -23,6 +23,8 @@ async function getSongs() {
 }
 
 async function main() {
+
+    let currentSong;
     // Get the list of all songs
     let songs = await getSongs();
     console.log(songs);
@@ -44,6 +46,12 @@ async function main() {
                                 <img class="invert" src="img/play.svg" alt="">
                             </div></li>`;
     }
+
+    // Attach an event Listener to each Song
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(
+        (e) => { console.log(e.getElementsByTagName("div")[0]) }
+    )
+
 
     
 
