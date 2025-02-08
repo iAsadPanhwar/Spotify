@@ -11,6 +11,9 @@
     color: white;
 }
 
+.close{
+    display: none;
+}
 
 
 .left {
@@ -22,6 +25,7 @@
     width: 73vw;
     position: relative;
     margin: 16px 0;
+    background-color: black;
 }
 
 .home{
@@ -90,7 +94,7 @@
     display: flex;
     gap:10px;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
 }
 
@@ -172,7 +176,7 @@
     filter: invert(1);
     background: #CACACA;
     border-radius: 15px;
-    height: 39px;
+    min-height: 39px;
 }
 
 .songbuttons{
@@ -222,13 +226,14 @@
 }
 
 .seekbar {
-    height: 2px;
+    height: 4px;
     width: 98%;
     background:  black;
     position: absolute;
     bottom: 0;
     border-radius: 12px;
     margin: 6px;
+    cursor: pointer;
 }
 
 .circle{
@@ -240,4 +245,85 @@
     bottom: 6px;
     left: 0;
     transition: left 0.5s;
+}
+
+.songbuttons img {
+    cursor: pointer;
+}
+
+.songinfo, .songtime{
+    color: black;
+    padding: 0 12px;
+}
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hemburgerCont{
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+    .left{
+        position: absolute;
+        left: -120%;
+        z-index: 1;
+        transition: all 1s;
+        width: 373px;
+        background-color: black;
+    }
+
+    .left .close{
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+    }
+
+    .right{
+        width: 100vw;
+        background-color: black;
+        margin: 0;
+
+    }
+    .playbar{
+        width: 94vw;
+    }
+
+    .seekbar{
+        width: 92%;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    .card{
+        width: 90vw;
+    }
+
+    .cardContainer{
+        margin: 0px;
+        justify-content: center;
+    }
+
+    .card{
+        display: block;
+    }
+
+    .abovebar{
+        flex-direction: column;
+        gap: 23px;
+        align-items: center;
+    }
 }
