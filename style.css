@@ -89,6 +89,10 @@
     padding: 15px;
 }
 
+.spotifyPlaylists h1 {
+    padding: 15px;
+}
+
 .cardContainer{
     margin: 25px;
     display: flex;
@@ -208,9 +212,13 @@
     justify-content: space-between;
 }
 
-.songList info{
+.songList .info{
     font-size: 13px;
     width: 344px;
+}
+
+.info div{
+    word-break: break-all;
 }
 
 .playNow{
@@ -254,6 +262,7 @@
 .songinfo, .songtime{
     color: black;
     padding: 0 12px;
+    width: 250px;
 }
 
 .abovebar{
@@ -282,6 +291,11 @@
         transition: all 1s;
         width: 373px;
         background-color: black;
+        padding: 0;
+    }
+
+    .songinfo, .songtime{
+        width: auto;
     }
 
     .left .close{
@@ -289,6 +303,8 @@
         right: 31px;
         top: 25px;
         width: 29px;
+        display: block;
+        cursor: pointer;
     }
 
     .right{

@@ -1,5 +1,6 @@
 console.log("Lets Write Javascript")
 let currentSong = new Audio();
+let songs;
 
 function secondsToMinutesSeconds(seconds){
     if (isNaN(seconds)|| seconds<0){
@@ -51,7 +52,7 @@ async function main() {
 
     
     // Get the list of all songs
-    let songs = await getSongs();
+    songs = await getSongs();
     playMusic(songs[0], true)
 
     console.log(songs);
@@ -98,9 +99,9 @@ async function main() {
     currentSong.addEventListener("timeupdate", () => { 
         console.log(currentSong.currentTime, currentSong.duration);
         document.querySelector(".songtime").innerHTML = `
-        ${secondsToMinutesSeconds(currentSong.currentTime)}/
+        ${secondsToMinutesSeconds(currentSong.currentTime)} / 
         ${secondsToMinutesSeconds(currentSong.duration)}`
-        document.querySelector(".circle").style.left = (currentSong.currentTime/currentSong.duration) * 100 + "%"
+        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
     })
 
     // Add an Event Listener to Seekbar
@@ -115,9 +116,27 @@ async function main() {
         console.log("hi")
     })
 
-    // Add and event Listener for close button in Hemburger
+    // Add an event Listener for close button in Hemburger
     document.querySelector(".close").addEventListener("click",() => { 
         document.querySelector(".left").style.left = "-120%"
+    })
+
+    // Add an event Listener for Previous Song
+    previous.addEventListener("click",() => { 
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]) 
+        console.log(songs, index)
+        if((index-1)>=0){
+            playMusic(songs[index-1])
+        }
+    })
+    
+    // Add an event Listener for Next Song
+    next.addEventListener("click",() => { 
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]) 
+        console.log(songs, index)
+        if((index+1)<songs.length){
+            playMusic(songs[index+1])
+        }
     })
     
 }
