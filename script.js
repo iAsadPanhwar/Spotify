@@ -34,15 +34,18 @@ async function main() {
         let cleanedSong = decodedSong.replaceAll("%20", " ") // Replace %20 with space
             .replace(/[\uD800-\uFFFF]/g, ""); // Remove emojis
 
-        songUL.innerHTML += `<li>${cleanedSong}</li>`;
+        songUL.innerHTML += `<li><img class="invert" src="img/music.svg" alt="Music">
+                            <div class="info">
+                                <div>${cleanedSong}</div>
+                                <div>Asad</div>
+                            </div>
+                            <div class="playNow">
+                                <span>Play Now</span>
+                                <img class="invert" src="img/play.svg" alt="">
+                            </div></li>`;
     }
 
-    // Create an audio element but do not autoplay
-    var audio = new Audio(songs[0]);
-    audio.play()
-    audio.addEventListener("loadeddata", () => {
-        console.log(audio.duration, audio.duration, audio.currentTime)
-    })
+    
 
 }
 
