@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap');
 
+:root{
+    --a: 0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -108,6 +112,13 @@
     border-radius: 5px;
     background-color: #252525;
     position: relative;
+    transition: all .9s;
+}
+
+.card:hover{
+    background-color: #4a4a4a;
+    cursor: pointer;
+    --a: 1;
 }
 
 .card > *{
@@ -131,7 +142,7 @@
     top: 166px;
     position: absolute;
     right: 18px;
-    opacity: 0;
+    opacity: var(--a);
     transition: all 1s ease-out;
 }
 
@@ -259,7 +270,28 @@
     cursor: pointer;
 }
 
-.songinfo, .songtime{
+.timevol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.songtime{
+    width: 125px;
+    color: black;
+    padding: 0 12px;
+}
+
+
+
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.songinfo{
     color: black;
     padding: 0 12px;
     width: 250px;
@@ -283,7 +315,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .left{
         position: absolute;
         left: -120%;
@@ -325,7 +357,7 @@
         display: block;
     }
     .card{
-        width: 90vw;
+        width: 44vw;
     }
 
     .cardContainer{
@@ -341,5 +373,18 @@
         flex-direction: column;
         gap: 23px;
         align-items: center;
+    }
+
+    .timevol{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 13px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card{
+        width: 64vw;
     }
 }

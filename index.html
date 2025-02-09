@@ -65,8 +65,20 @@
             </div>
             <div class="spotifyPlaylists"><h1>Spotify Playlists</h1></div>
             <div class="cardContainer">
-                <div class="card">
-                    <div class="play">
+                <div data-folder="cs" class="card">
+                    <div  class="play">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 20V4L19 12L5 20Z" fill="black" stroke="black" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <img width="300" src="https://i.scdn.co/image/ab67706f0000000351b56881daed051840fe8fba"
+                        alt="Happy Hits">
+                    <h2>Happy Hits!</h2>
+                    <p>Hits to boost your mood and fill you with happiness</p>
+                </div>
+                <div data-folder="ncs" class="card">
+                    <div  class="play">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 20V4L19 12L5 20Z" fill="black" stroke="black" stroke-width="1.5"
                                 stroke-linejoin="round" />
@@ -91,7 +103,15 @@
                         <img width="40" id="play" src="img/play.svg" alt="Play Song">
                         <img width="40" id="next" src="img/nextsong.svg" alt="Next Song">
                     </div>
-                    <div class="songtime"></div>
+                    <div class="timevol">
+                         <div class="songtime"></div>
+                        <div class="volume">
+                            <img width="25px" src="img/volume.svg" alt="Volume">
+                            <div class="range">
+                                <input type="range" name="volume" id="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
